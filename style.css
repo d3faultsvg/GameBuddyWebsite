@@ -1,0 +1,86 @@
+
+
+body {
+  background-image: url("background.jpg"); 
+  background-size: cover;       /* dopasowuje proporcje, bez rozciągania */
+  background-position: center;  /* wyśrodkowuje obraz */
+  background-repeat: no-repeat; /* nie powtarza tła */
+  background-attachment: fixed; /* tło zostaje, gdy przewijasz stronę */
+  animation: fadeIn 1.7s ease;
+}
+
+
+.navbar{
+  padding-bottom: 2%;
+  height: 20%;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.8);
+  align-items: center;
+  animation: fadeInDown 2s ease;
+  
+}
+
+h1{
+    padding-top: 20%;
+    animation: fadeIn 1.7s ease;
+
+}
+
+.text-light{
+  align-items: center;
+  padding-top: 20px;
+  font-weight:bolder;
+
+}
+
+.nav-link {
+  padding-top: 20px;
+  font-size: 17px;
+  font-weight: bold;
+  color:#ffffff !important;
+  transition: color 0s ease, transform 1s;
+  animation: fadeInDown 2s ease;
+}
+
+/* przy najezdzaniu myszka efekty */
+.nav-link:hover{
+  color:#ffffff !important;
+  transform:scale(0.8);
+  animation: fadeInDown 2s ease;
+}
+
+.navbar-brand {
+  padding-top: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color:#ffffff !important;
+  transition: color 0s ease, transform 1s;
+  animation: fadeInDown 2s ease;
+  
+}
+
+.navbar-brand:hover{
+  color:#218838 !important;
+  transform:scale(0.8);
+  animation: fadeInDown 2s ease;
+}
+
+
+.btn-success {
+  
+  padding-bottom: 10px;
+  background-color: #28a745;
+  border: none;
+  box-shadow:#218838;
+  
+
+}
+
+footer{
+    font-size: 20px;
+    font-weight: 700;
+    
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}

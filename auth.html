@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Logowanie — GameBuddy</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="p-3">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">🎮 GameBuddy</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="find.html">Znajdź</a></li>
+        <li class="nav-item"><a class="nav-link" href="posts.html">Ogłoszenia</a></li>
+        <li class="nav-item"><a class="nav-link" href="inbox.html">Wiadomości</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt</a></li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-2">
+        <!-- adminLink jest ukrywany/pokazywany przez JS (app.js) -->
+        <a id="adminLink" class="btn btn-sm btn-danger d-none" href="admin.html">Panel Admina</a>
+
+        <!-- status (np. "Witaj, nick") -->
+        <span id="login-status" class="text-light me-2"></span>
+
+        <!-- login/logout buttons: app.js pokazuje/ukrywa logoutBtn -->
+        <a id="loginBtnNav" class="btn btn-sm btn-outline-light" href="auth.html">Zaloguj</a>
+        <button id="logoutBtn" class="btn btn-sm btn-outline-light d-none">Wyloguj</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <main class="container mt-4">
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <div class="card p-4">
+          <h3 class="text-center">Zaloguj / Zarejestruj</h3>
+
+          <div class="mb-2">
+            <input id="email" type="email" class="form-control" placeholder="Email" />
+          </div>
+          <div class="mb-2">
+            <input id="password" type="password" class="form-control" placeholder="Hasło" />
+          </div>
+
+          <!-- dodatkowe pole dla rejestracji -->
+          <div class="mb-2">
+            <input id="nickForSign" type="text" class="form-control" placeholder="Nick (unikalny) — wymagane przy rejestracji" />
+          </div>
+
+          <div class="d-grid gap-2">
+            <button id="loginBtn" class="btn btn-success">Zaloguj</button>
+            <button id="signupBtn" class="btn btn-outline-success">Zarejestruj się</button>
+          </div>
+
+          <p id="message" class="mt-3 text-center"></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
